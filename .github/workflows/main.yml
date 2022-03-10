@@ -9,6 +9,6 @@ jobs:
     name: Liqubase Command Demo
     steps:
       - name: Import variables
-        uses: actions/private-github-action
+        uses: actions/private-github-action@v1.0.0
         with:
           masterChangeLogFile: "${{ env.MASTER_CHANGE_LOG_FILE }}"
