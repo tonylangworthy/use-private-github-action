@@ -1,0 +1,14 @@
+on: push
+
+env:
+  MASTER_CHANGE_LOG_FILE: "changelog-master.xml"
+
+jobs:
+  run-liqubase-command:
+    runs-on: self-hosted
+    name: Liqubase Command Demo
+    steps:
+      - name: Import variables
+        uses: actions/private-github-action
+        with:
+          masterChangeLogFile: "${{ env.MASTER_CHANGE_LOG_FILE }}"
